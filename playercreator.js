@@ -1,15 +1,15 @@
 /*
 @desc
-	This is a set of javascript functions that mimics the logic used
-	when creating a player in EA's NHL 13. Anyone is allowed to
-	modify this code as they see fit and use it on whatever website they
-	choose. See the README for more info.
-@Version	1.1
-@Author	AngryMikeGrrrr
-@Home	
+    This is a set of javascript functions that mimics the logic used
+    when creating a player in EA's NHL 13. Anyone is allowed to
+    modify this code as they see fit and use it on whatever website they
+    choose. See the README for more info.
+@Version    1.0
+@Author AngryMikeGrrrr
+@Home   
 @Usage
-	new PlayerCreator({render_to : "some_div"});
-@License	Free
+    new PlayerCreator({render_to : "some_div"});
+@License    Free
 */
 
 function PlayerCreator(options) {
@@ -27,23 +27,23 @@ function PlayerCreator(options) {
         "ath_xp"    : 0, 
         "attrs"     : {}, 
         "boosts"    : {}
-    }
+    };
 
     function init() {
         
-        $root.append("<h1>NHL 12 Player Creator</h1><p><label>Type:</label><select id=\"type\"><option value=\"player\">Player</option><option value=\"goalie\">Goalie</option></select><label>Build:</label><select id=\"builds\"></select><label>Card:</label><select id=\"cards\"></select><p id=\"share_build\"></p></p><h2>Overall: <span class=\"average\"></span></h3><hr><h3 class=\"section_title\"></h3><p class=\"header\">XP: <span id=\"offxp\" class=\"xp\"></span></p><table class=\"attribute\"></table><hr><h3 class=\"section_title\"></h3><p class=\"header\">XP: <span id=\"defxp\" class=\"xp\"></span></p><table class=\"attribute\"></table><hr><h3 class=\"section_title\"></h3><p class=\"header\">XP: <span id=\"athxp\" class=\"xp\"></span></p><table class=\"attribute\"></table><hr><h3>Boosts</h3><table class=\"boosts\"></table>");
+        $root.append("<h1>NHL 13 Player Creator</h1><p><label>Type:</label><select id=\"type\"><option value=\"player\">Player</option><option value=\"goalie\">Goalie</option></select><label>Build:</label><select id=\"builds\"></select><label>Card:</label><select id=\"cards\"></select><p id=\"share_build\"></p></p><h2>Overall: <span class=\"average\"></span></h3><hr><h3 class=\"section_title\"></h3><p class=\"header\">XP: <span id=\"offxp\" class=\"xp\"></span></p><table class=\"attribute\"></table><hr><h3 class=\"section_title\"></h3><p class=\"header\">XP: <span id=\"defxp\" class=\"xp\"></span></p><table class=\"attribute\"></table><hr><h3 class=\"section_title\"></h3><p class=\"header\">XP: <span id=\"athxp\" class=\"xp\"></span></p><table class=\"attribute\"></table><hr><h3>Boosts</h3><table class=\"boosts\"></table>");
         
-        if(options.credits != false)
-            $root.append("<p class=\"credits\">Created by <a href=\"http://live.xbox.com/en-US/member/AngryMikeGrrrr\">AngryMikeGrrrr</a> in 2011</p>");
+        if(options.credits !== false)
+            $root.append("<p class=\"credits\">Created by <a href=\"http://live.xbox.com/en-US/member/AngryMikeGrrrr\">AngryMikeGrrrr</a> in 2011 with updates from <a href='http://live.xbox.com/en-US/Profile?GamerTag=Twisterman'>Mike Nicoll</a> in 2012</p>");
         
-    	// load json data
-    	$.getJSON('attributes.json', function(data) {
+        // load json data
+        $.getJSON('attributes.json', function(data) {
             creator = data;
             render_cards(creator.card_types, $root.find("#cards")); 
             render_share($root.find("#share_build"));
             render_page();   
-    	});
-	
+        });
+    
         $root.find(".xp").bind("pc:update_xp", function(event) {
             $root.find("#offxp").html(player.off_xp);
             $root.find("#defxp").html(player.def_xp);
@@ -102,7 +102,7 @@ function PlayerCreator(options) {
         }
     
         $elm.change(function(event, fire_event) {
-            if(fire_event == undefined)
+            if(fire_event === undefined)
                 fire_event = true;
             load_build($(this).val());  
             if(fire_event)
@@ -133,9 +133,9 @@ function PlayerCreator(options) {
         $root.find(".reset").remove();
         $.each(categories, function(name, attrs) {         
             $($root.find(".section_title")[i]).html(name); 
-            $($root.find(".attribute")[i]).append("<tr><td></td><td class=\"header\">Value</td><td class=\"header\">XP Cost</td><td class=\"header\">Boost</td><td class=\"header\">Total</td><td></td><td></td></tr>"); 
+            $($root.find(".attribute")[i]).append("<tr><td></td><td class=\"header\">Value</td><td class=\"header\">Maximum</td><td class=\"header\">XP Cost</td><td class=\"header\">Boost</td><td class=\"header\">Total</td><td></td><td></td></tr>"); 
             $.each(attrs, function(index, attr) {
-                $($root.find(".attribute")[i]).append("<tr><td class=\"attr\">"+attr+"</td><td class=\"value\"></td><td class=\"cost\"></td><td class=\"boost\"></td><td class=\"total\"></td><td><input class=\"minus\" type=\"button\" value=\"-\" /></td><td><input class=\"plus\" type=\"button\" value=\"+\" /></td></tr>");
+                $($root.find(".attribute")[i]).append("<tr><td class=\"attr\">"+attr+"</td><td class=\"value\"></td><td class=\"maximum\"><td class=\"cost\"></td><td class=\"boost\"></td><td class=\"total\"></td><td><input class=\"minus\" type=\"button\" value=\"-\" /></td><td><input class=\"plus\" type=\"button\" value=\"+\" /></td></tr>");
                 $root.find(".plus:last").click(function() {
                     update_attribute($(this).parent(), attr, 1);
                 });
@@ -152,6 +152,9 @@ function PlayerCreator(options) {
                 $root.find(".cost:last").parent().bind("pc:update_cost", function(event, value) {            
                     $(this).find(".cost").html(value); 
                 });
+                $root.find(".maximum:last").parent().bind("pc:update_maximum", function(event, value) {            
+                    $(this).find(".maximum").html(value); 
+                });
                 $root.find(".boost:last").parent().bind("pc:update_boost", function(event, value) {            
                     $(this).find(".boost").html(value); 
                 });
@@ -164,7 +167,7 @@ function PlayerCreator(options) {
                     $root.find(".average").html(calculate_average());
                 });
             });
-            $($root.find(".attribute")[i]).after("<input class='reset' type='button' value='Reset' \>");
+            $($root.find(".attribute")[i]).after("<input class='reset' type='button' value='Reset' \\>");
             $root.find(".reset:last").click(function(){
                reset_group(name); 
             });
@@ -178,7 +181,7 @@ function PlayerCreator(options) {
         $elm.append("<tr><td></td><td class=\"header\">Slot 1</td><td class=\"header\">Slot 2</td><td class=\"header\">Slot 3</td></tr>");
         $.each(boosts, function(boost, attrs) {
             $elm.append("<tr><td class=\"attr\">"+boost+"</td>");
-            for(var i = 0; i < 3; i++) {
+            $.each([0, 1, 2], function(i, v) { 
                 $elm.find("tr:last").append("<td><input type=\"radio\" name=\""+boost+"_"+i+"\" value=\"1\">+1</input><input type=\"radio\" name=\""+boost+"_"+i+"\" value=\"3\">+3</input><input type=\"radio\" name=\""+boost+"_"+i+"\" value=\"5\">+5</input><select class=\"slot\"><option value=\"\" selected=\"selected\">&nbsp;</option>");
                 $root.find("tr:last > td:last > :radio").attr("disabled", "disabled");
                 $root.find("tr:last > td:last > :radio").change(function() {
@@ -195,7 +198,7 @@ function PlayerCreator(options) {
                 $root.find("tr:last > td:last > select").change(function() {
                     attr = $(this).val();                     
                     $(this).parent().find("input").prop('checked', false);
-                    if(attr == "") {
+                    if(attr === "") {
                         $(this).parent().find("input").attr("disabled", "disabled");                           
                         attr = $(this).data('old_attr');
                         update_boost(attr);
@@ -216,10 +219,10 @@ function PlayerCreator(options) {
                     $elm.find(".slot:last").append("<option value=\""+attr+"\">"+attr+"</option>");
                 });
                 $elm.append("</select></td>");   
-            }
+            });
             $elm.append("</tr>");
         });
-        $elm.after("<input class='reset' type='button' value='Reset' \>");
+        $elm.after("<input class='reset' type='button' value='Reset' \\>");
         $root.find(".reset:last").click(function() {
             $(".slot").val("");
             $(".slot").change();
@@ -246,21 +249,23 @@ function PlayerCreator(options) {
             reset_attribute(attr);
         });
         xp = creator.card_types[player.card];
-        if(group_name == keys[0]) 
+        if(group_name === keys[0]) 
             player.off_xp = xp;
-        if(group_name == keys[1]) 
+        if(group_name === keys[1]) 
             player.def_xp = xp;
-        if(group_name == keys[2]) 
+        if(group_name === keys[2]) 
             player.ath_xp = xp;
         $root.find(".xp").trigger("pc:update_xp");
     }
     
     function reset_attribute(attr) {
         value = creator[player.context].attributes[player.build][attr].initial;
+        max = creator[player.context].attributes[player.build][attr].maximum;
         player.attrs[attr] = value;
-        boost = player.boosts[attr] == undefined ? 0 : player.boosts[attr]; 
+        boost = player.boosts[attr] === undefined ? 0 : player.boosts[attr]; 
         $elm = $root.find('.attribute tr:contains("'+attr+'")');
         $elm.trigger('pc:update_value', value);
+        $elm.trigger('pc:update_maximum', max);
         $elm.trigger('pc:update_cost', 10);
         $elm.trigger('pc:update_boost', boost);
         $elm.trigger('pc:update_total', value + boost);
@@ -280,13 +285,13 @@ function PlayerCreator(options) {
         // calculate cost
         attr = creator[player.context].attributes[player.build][attribute]; 
         current = player.attrs[attribute]; 
-        new_value = current+((value*2)-1); 
+        new_value = current+((value*2)-1);         
         xp_cost = calculate_cost(attr.initial, current, value, attr.cost);
         new_cost = calculate_cost(attr.initial, new_value, 1, attr.cost);
     
         did_update = false; 
     
-        boost = player.boosts[attribute] == undefined ? 0 : player.boosts[attribute]; 
+        boost = player.boosts[attribute] === undefined ? 0 : player.boosts[attribute]; 
         total = current+boost; 
     
         keys = [];
@@ -294,31 +299,31 @@ function PlayerCreator(options) {
             keys.push(key);
     
         if($.inArray(attribute, creator[player.context].attribute_categories[keys[0]]) > -1 ) {
-            if(value == 1 && total < 99 && player.off_xp >= xp_cost) {
+            if(value === 1 && total < 99 && player.off_xp >= xp_cost && current < attr.maximum) {
                did_update = true;  
                player.off_xp -= xp_cost; 
             }
-            if(value == 0 && current > attr.initial) {
+            if(value === 0 && current > attr.initial) {
                did_update = true;  
                player.off_xp += xp_cost;
             }
         }
         else if($.inArray(attribute, creator[player.context].attribute_categories[keys[1]]) > -1 ) {
-            if(value == 1 && total < 99 && player.def_xp >= xp_cost) {
+            if(value === 1 && total < 99 && player.def_xp >= xp_cost && current < attr.maximum) {
                 did_update = true; 
                 player.def_xp -= xp_cost;
             }
-            if(value == 0 && current > attr.initial) {
+            if(value === 0 && current > attr.initial) {
                 did_update = true; 
                 player.def_xp += xp_cost;
             }
         }
         else {
-            if(value == 1 && total < 99 && player.ath_xp >= xp_cost) {
+            if(value === 1 && total < 99 && player.ath_xp >= xp_cost && current < attr.maximum) {
                 did_update = true; 
                 player.ath_xp -= xp_cost;
             }
-            if(value == 0 && current > attr.initial) {
+            if(value === 0 && current > attr.initial) {
                 did_update = true; 
                 player.ath_xp += xp_cost;
             }
@@ -337,7 +342,7 @@ function PlayerCreator(options) {
     // inc = 0 for decreasing and 1 for increasing
     function calculate_cost(initial, current, inc, cost) {
         var xp_cost = 10;
-        if(cost != 0)
+        if(cost !== 0)
             xp_cost += 10*Math.floor((current-initial+inc-1)/cost);
         return xp_cost;
     }
@@ -346,21 +351,21 @@ function PlayerCreator(options) {
         total = 0; 
         num = 0; 
         $.each(player.attrs, function(attr, value) {
-            boost = player.boosts[attr] == undefined ? 0 : player.boosts[attr]; 
+            boost = player.boosts[attr] === undefined ? 0 : player.boosts[attr]; 
             total = total + value + boost; 
             num += 1; 
         }); 
-        return (num == 0 ? 0 : Math.floor(total/num) ) ;
+        return (num === 0 ? 0 : Math.floor(total/num) ) ;
     }
   
     // takes an attr, figures out which radio buttons are checked and then updates the boost column
     function update_boost(attr) {
-        if(attr == "") return;
+        if(attr === "") return;
         total = 0;
         $root.find(".boosts [value='"+attr+"']:parent").filter("select").each(function(i, elm) {
             v = $(elm).parent().find(":radio:checked").val();
-            if(v == undefined) v = 0; 
-            total += parseInt(v);    
+            if(v === undefined) v = 0; 
+            total += parseInt(v, 10);
         });
         player.boosts[attr] = total;                    
         $(".attr:contains('"+attr+"')").parent().trigger('pc:update_boost', total);
@@ -369,7 +374,7 @@ function PlayerCreator(options) {
     
     // $elm is the select element and attr is the value
     function update_boost_val($elm) {
-        cur_val = player.boosts[$elm.val()] == undefined ? 0 : player.boosts[$elm.val()];
+        cur_val = player.boosts[$elm.val()] === undefined ? 0 : player.boosts[$elm.val()];
         $plus5 = $elm.parent().find("[value='5']");
         $plus3 = $elm.parent().find("[value='3']");
         $plus1 = $elm.parent().find("[value='1']");
@@ -381,14 +386,14 @@ function PlayerCreator(options) {
         else
             $plus5.removeAttr('disabled');
             
-        if(cur_val == 3 || cur_val == 4 || cur_val == 8 || cur_val == 9 ) {
+        if(cur_val === 3 || cur_val === 4 || cur_val === 8 || cur_val === 9 ) {
             if(!$plus3.is(":checked"))
                 $plus3.attr("disabled", "disabled");
         }   
         else
             $plus3.removeAttr('disabled');
             
-        if(cur_val == 1 || cur_val == 4 || cur_val == 6 || cur_val == 9 ) {
+        if(cur_val === 1 || cur_val === 4 || cur_val === 6 || cur_val === 9 ) {
             if(!$plus1.is(":checked"))
                 $plus1.attr("disabled", "disabled");
         }   
@@ -397,11 +402,11 @@ function PlayerCreator(options) {
     }
     
     function output_as_plain() {
-        str = ""
+        str = "";
         str += player.build + ", " + player.card + ", Overall: "+ calculate_average() + "\n\n";
          $.each(player.attrs, function(attr, value) {
              str += attr + ": "+ value;
-             boost = player.boosts[attr] == undefined ? 0 : player.boosts[attr]; 
+             boost = player.boosts[attr] === undefined ? 0 : player.boosts[attr]; 
              if(boost > 0)
                 str += " (+"+boost+")";
              str += "\n";
@@ -410,27 +415,27 @@ function PlayerCreator(options) {
     }
     
     function output_as_bbcode() {
-        str = ""
-        str += "[b]Build:[/b] "+player.build + "\n" 
+        str = "";
+        str += "[b]Build:[/b] "+player.build + "\n"; 
         str += "[b]Card:[/b] "+player.card +"\n\n";
-        str += "[table][b]Attribute[/b] | [b]Value[/b] | [b]Boost[/b] | [b]Total[/b] \n"
+        str += "[table][b]Attribute[/b] | [b]Value[/b] | [b]Boost[/b] | [b]Total[/b] \n";
          $.each(player.attrs, function(attr, value) {
              str += attr + "|"+ value + "|";
-             boost = player.boosts[attr] == undefined ? 0 : player.boosts[attr]; 
+             boost = player.boosts[attr] === undefined ? 0 : player.boosts[attr]; 
              if(boost > 0)
                 str += "+"+boost;
              str += "| "+(value+boost)+"\n";
          });     
-        str += "[b]Overall[/b]|||"+ calculate_average() + "[/table]"
+        str += "[b]Overall[/b]|||"+ calculate_average() + "[/table]";
         return str;
     }
     
     function output_as_reddit() {
-        str = ""
+        str = "";
         str += player.build + ", " + player.card + ", Overall: "+ calculate_average() + "\n\n";
          $.each(player.attrs, function(attr, value) {
              str += attr + ": "+ value;
-             boost = player.boosts[attr] == undefined ? 0 : player.boosts[attr]; 
+             boost = player.boosts[attr] === undefined ? 0 : player.boosts[attr]; 
              if(boost > 0)
                 str += " (+"+boost+")";
              str += "\n\n";
@@ -440,9 +445,9 @@ function PlayerCreator(options) {
     
 
     function getUrlVars() { 
-    	var map = {}; 
-    	var parts = window.location.search.replace(/[?&]+([^=&]+)(=[^&]*)?/gi, function(m,key,value) { map[key] = (value === undefined) ? true : value.substring(1); }); 
-    	return map; 
+        var map = {}; 
+        window.location.search.replace(/[?&]+([^=&]+)(=[^&]*)?/gi, function(m,key,value) { map[key] = (value === undefined) ? true : value.substring(1); }); 
+        return map; 
     }
 
     function insertParam(key, value)
@@ -453,14 +458,14 @@ function PlayerCreator(options) {
 
         var i=kvp.length; var x; while(i--) 
         {
-        	x = kvp[i].split('=');
+            x = kvp[i].split('=');
 
-        	if (x[0]==key)
-        	{
-        		x[1] = value;
-        		kvp[i] = x.join('=');
-        		break;
-        	}
+            if (x[0]===key)
+            {
+                x[1] = value;
+                kvp[i] = x.join('=');
+                break;
+            }
         }
 
         if(i<0) {kvp[kvp.length] = [key,value].join('=');}
