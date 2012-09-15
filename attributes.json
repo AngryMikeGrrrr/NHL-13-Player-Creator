@@ -20,10 +20,10 @@
         "Legend 3"      : 2500
     },
     
-	"player" : {	    
-	    "attributes" : {	        
-	        "Sniper" : {
-	            "Deking"        : { "initial" : 65, "cost" : 5, "maximum" : 83 }, 
+    "player" : {        
+        "attributes" : {            
+            "Sniper" : {
+                "Deking"        : { "initial" : 65, "cost" : 5, "maximum" : 83 }, 
                 "Hand Eye"      : { "initial" : 65, "cost" : 6, "maximum" : 85 },
                 "Off Awareness" : { "initial" : 65, "cost" : 6, "maximum" : 86 },
                 "Passing"       : { "initial" : 65, "cost" : 4, "maximum" : 80 },
@@ -47,10 +47,10 @@
                 "Endurance"     : { "initial" : 65, "cost" : 5, "maximum" : 80 },
                 "Speed"         : { "initial" : 65, "cost" : 2, "maximum" : 82 },
                 "Strength"      : { "initial" : 65, "cost" : 3, "maximum" : 78 }                
-	        },
-	        
-	        "Power Forward" : {
-	            "Deking"        : { "initial" : 65, "cost" : 5, "maximum" : 83 },
+            },
+            
+            "Power Forward" : {
+                "Deking"        : { "initial" : 65, "cost" : 5, "maximum" : 83 },
                 "Hand Eye"      : { "initial" : 65, "cost" : 6, "maximum" : 82 },
                 "Off Awareness" : { "initial" : 65, "cost" : 6, "maximum" : 82 },
                 "Passing"       : { "initial" : 65, "cost" : 5, "maximum" : 81 },
@@ -74,10 +74,10 @@
                 "Endurance"     : { "initial" : 65, "cost" : 6, "maximum" : 78 },
                 "Speed"         : { "initial" : 65, "cost" : 2, "maximum" : 82 },
                 "Strength"      : { "initial" : 65, "cost" : 5, "maximum" : 85 }
-	        }, 
-	        
-	        "Grinder" : {
-	            "Deking"        : { "initial" : 65, "cost" : 3, "maximum" : 80 },
+            }, 
+            
+            "Grinder" : {
+                "Deking"        : { "initial" : 65, "cost" : 3, "maximum" : 80 },
                 "Hand Eye"      : { "initial" : 65, "cost" : 4, "maximum" : 84 },
                 "Off Awareness" : { "initial" : 65, "cost" : 3, "maximum" : 76 },
                 "Passing"       : { "initial" : 65, "cost" : 4, "maximum" : 76 },
@@ -101,10 +101,10 @@
                 "Endurance"     : { "initial" : 65, "cost" : 6, "maximum" : 85 },
                 "Speed"         : { "initial" : 65, "cost" : 2, "maximum" : 87 },
                 "Strength"      : { "initial" : 65, "cost" : 4, "maximum" : 80 }  
-	        },
-	        
-	        "2 Way Forward" : {
-	            "Deking"        : { "initial" : 65, "cost" : 4, "maximum" : 83 },
+            },
+            
+            "2 Way Forward" : {
+                "Deking"        : { "initial" : 65, "cost" : 4, "maximum" : 83 },
                 "Hand Eye"      : { "initial" : 65, "cost" : 5, "maximum" : 84 },
                 "Off Awareness" : { "initial" : 65, "cost" : 5, "maximum" : 82 },
                 "Passing"       : { "initial" : 65, "cost" : 5, "maximum" : 82 },
@@ -128,10 +128,10 @@
                 "Endurance"     : { "initial" : 65, "cost" : 10, "maximum" : 85 },
                 "Speed"         : { "initial" : 65, "cost" : 2, "maximum" : 82 },
                 "Strength"      : { "initial" : 65, "cost" : 3, "maximum" : 78 }  
-	        },
-	        
-	        "Playmaker" : {
-	            "Deking"        : { "initial" : 65, "cost" : 10, "maximum" : 87 },
+            },
+            
+            "Playmaker" : {
+                "Deking"        : { "initial" : 65, "cost" : 10, "maximum" : 87 },
                 "Hand Eye"      : { "initial" : 65, "cost" : 10, "maximum" : 85 },
                 "Off Awareness" : { "initial" : 65, "cost" : 10, "maximum" : 87 },
                 "Passing"       : { "initial" : 65, "cost" : 10, "maximum" : 87 },
@@ -155,10 +155,10 @@
                 "Endurance"     : { "initial" : 65, "cost" : 6, "maximum" : 80 },
                 "Speed"         : { "initial" : 65, "cost" : 2, "maximum" : 82 },
                 "Strength"      : { "initial" : 65, "cost" : 1, "maximum" : 75 }  
-	        },
-	        
-	        "Tough Guy" : {
-	            "Deking"        : { "initial" : 65, "cost" : 1, "maximum" : 75 },
+            },
+            
+            "Tough Guy" : {
+                "Deking"        : { "initial" : 65, "cost" : 1, "maximum" : 75 },
                 "Hand Eye"      : { "initial" : 65, "cost" : 3, "maximum" : 78 },
                 "Off Awareness" : { "initial" : 65, "cost" : 2, "maximum" : 75 },
                 "Passing"       : { "initial" : 65, "cost" : 2, "maximum" : 75 },
@@ -182,10 +182,10 @@
                 "Endurance"     : { "initial" : 65, "cost" : 6, "maximum" : 78 },
                 "Speed"         : { "initial" : 65, "cost" : 2, "maximum" : 80 },
                 "Strength"      : { "initial" : 65, "cost" : 6, "maximum" : 87 }
-	        },
-	        
-	        "Defensive Defenseman" : {
-	            "Deking"        : { "initial" : 65, "cost" : 1, "maximum" : 70 },
+            },
+            
+            "Defensive Defenseman" : {
+                "Deking"        : { "initial" : 65, "cost" : 1, "maximum" : 70 },
                 "Hand Eye"      : { "initial" : 65, "cost" : 4, "maximum" : 78 },
                 "Off Awareness" : { "initial" : 65, "cost" : 2, "maximum" : 72 },
                 "Passing"       : { "initial" : 65, "cost" : 4, "maximum" : 80 },
@@ -208,11 +208,11 @@
                 "Durability"    : { "initial" : 65, "cost" : 0, "maximum" : 82 },
                 "Endurance"     : { "initial" : 65, "cost" : 6, "maximum" : 80 },
                 "Speed"         : { "initial" : 65, "cost" : 2, "maximum" : 80 },
-                "Strength"      : { "initial" : 65, "cost" : 5, "maximum" : 85 }	            
-	        },
-	        
-	        "Offensive Defenseman" : {
-	            "Deking"        : { "initial" : 65, "cost" : 6, "maximum" : 84 },
+                "Strength"      : { "initial" : 65, "cost" : 5, "maximum" : 85 }                
+            },
+            
+            "Offensive Defenseman" : {
+                "Deking"        : { "initial" : 65, "cost" : 6, "maximum" : 84 },
                 "Hand Eye"      : { "initial" : 65, "cost" : 6, "maximum" : 80 },
                 "Off Awareness" : { "initial" : 65, "cost" : 6, "maximum" : 85 },
                 "Passing"       : { "initial" : 65, "cost" : 6, "maximum" : 83 },
@@ -236,10 +236,10 @@
                 "Endurance"     : { "initial" : 65, "cost" : 6, "maximum" : 80 },
                 "Speed"         : { "initial" : 65, "cost" : 2, "maximum" : 82 },
                 "Strength"      : { "initial" : 65, "cost" : 1, "maximum" : 78 }  
-	        },
-	        
-	        "2 Way Defender" : {
-	            "Deking"        : { "initial" : 65, "cost" : 3, "maximum" : 77 },
+            },
+            
+            "2 Way Defender" : {
+                "Deking"        : { "initial" : 65, "cost" : 3, "maximum" : 77 },
                 "Hand Eye"      : { "initial" : 65, "cost" : 5, "maximum" : 79 },
                 "Off Awareness" : { "initial" : 65, "cost" : 5, "maximum" : 77 },
                 "Passing"       : { "initial" : 65, "cost" : 5, "maximum" : 82 },
@@ -263,10 +263,10 @@
                 "Endurance"     : { "initial" : 65, "cost" : 10, "maximum" : 82 },
                 "Speed"         : { "initial" : 65, "cost" : 2, "maximum" : 82 },
                 "Strength"      : { "initial" : 65, "cost" : 3, "maximum" : 80 } 
-	        }, 
-	        
-	        "Tough Guy D-Man" : {
-	            "Deking"        : { "initial" : 65, "cost" : 1, "maximum" : 75 },
+            }, 
+            
+            "Tough Guy D-Man" : {
+                "Deking"        : { "initial" : 65, "cost" : 1, "maximum" : 75 },
                 "Hand Eye"      : { "initial" : 65, "cost" : 3, "maximum" : 78 },
                 "Off Awareness" : { "initial" : 65, "cost" : 3, "maximum" : 72 },
                 "Passing"       : { "initial" : 65, "cost" : 3, "maximum" : 75 },
@@ -290,7 +290,7 @@
                 "Endurance"     : { "initial" : 65, "cost" : 6, "maximum" : 78 },
                 "Speed"         : { "initial" : 65, "cost" : 2, "maximum" : 80 },
                 "Strength"      : { "initial" : 65, "cost" : 6, "maximum" : 87 }
-	        }
+            }
         },
     
         "attribute_categories" : {
@@ -300,93 +300,93 @@
         },
     
         "types" : ["Sniper", "Power Forward", "Grinder", "2 Way Forward", "Playmaker", "Tough Guy", "Defensive Defenseman", "Offensive Defenseman", "2 Way Defender", "Tough Guy D-Man"],
-	
-    	"boosts" : {
-    	    "Stick" : ["SS Accuracy", "SS Power", "WS Accuracy", "WS Power", "Off Awareness", "Def Awareness", "Faceoffs", "Stick Check"],
-    	    "Skates" : ["Aggression", "Body Check", "Fighting", "Acceleration", "Agility", "Balance", "Endurance", "Speed"], 
-    	    "Helmet" : ["Deking", "Hand Eye", "Off Awareness", "Passing", "Puck Control", "SS Accuracy", "SS Power", "WS Accuracy", "WS Power", "Aggression", "Body Check", "Def Awareness", "Discipline", "Faceoffs", "Fighting", "Shot Blocking", "Stick Check", "Acceleration", "Agility", "Balance", "Durability", "Endurance", "Strength"],
-    	    "Gloves" : ["Deking", "Hand Eye", "Passing", "Puck Control", "Discipline", "Shot Blocking", "Strength", "Durability"]
-    	}
+    
+        "boosts" : {
+            "Stick" : ["SS Accuracy", "SS Power", "WS Accuracy", "WS Power", "Off Awareness", "Def Awareness", "Faceoffs", "Stick Check"],
+            "Skates" : ["Aggression", "Body Check", "Fighting", "Acceleration", "Agility", "Balance", "Endurance", "Speed"], 
+            "Helmet" : ["Deking", "Hand Eye", "Off Awareness", "Passing", "Puck Control", "SS Accuracy", "SS Power", "WS Accuracy", "WS Power", "Aggression", "Body Check", "Def Awareness", "Discipline", "Faceoffs", "Fighting", "Shot Blocking", "Stick Check", "Acceleration", "Agility", "Balance", "Durability", "Endurance", "Strength"],
+            "Gloves" : ["Deking", "Hand Eye", "Passing", "Puck Control", "Discipline", "Shot Blocking", "Strength", "Durability"]
+        }
     }, 
     
     "goalie" : {
-	    "types" : ["Stand Up", "Hybrid", "Butterfly"],
-	
-    	"attributes" : { 
-    	    "Stand Up" : {
-    	        "Angles"            : { "initial" : 65, "cost" : 10, "maximum" :84 }, 
-    	        "Breakaway"         : { "initial" : 65, "cost" : 4, "maximum" : 84 }, 
-    	        "Five Hole"         : { "initial" : 65, "cost" : 4, "maximum" : 82 }, 
-    	        "Glove High"        : { "initial" : 65, "cost" : 4, "maximum" : 86 }, 
-    	        "Glove Low"         : { "initial" : 65, "cost" : 3, "maximum" : 82 }, 
-    	        "Stick High"        : { "initial" : 65, "cost" : 4, "maximum" : 86 }, 
-    	        "Stick Low"         : { "initial" : 65, "cost" : 4, "maximum" : 82 },
-    	        "Passing"           : { "initial" : 65, "cost" : 4, "maximum" : 84}, 
-    	        "Poke Check"        : { "initial" : 65, "cost" : 4, "maximum" : 84}, 
-    	        "Rebound Control"   : { "initial" : 65, "cost" : 2, "maximum" : 82 }, 
-    	        "Shot Recovery"     : { "initial" : 65, "cost" : 3, "maximum" : 86 },
-    	        "Aggressiveness"    : { "initial" : 65, "cost" : 10, "maximum" :84 }, 
-    	        "Agility"           : { "initial" : 65, "cost" : 3, "maximum" : 84 }, 
-    	        "Durability"        : { "initial" : 65, "cost" : 10, "maximum" :84 }, 
-    	        "Endurance"         : { "initial" : 65, "cost" : 10, "maximum" :84 }, 
-    	        "Speed"             : { "initial" : 65, "cost" : 3, "maximum" : 84 }, 
-    	        "Vision"            : { "initial" : 65, "cost" : 6, "maximum" : 84 }
-    	    }, 
+        "types" : ["Stand Up", "Hybrid", "Butterfly"],
+    
+        "attributes" : { 
+            "Stand Up" : {
+                "Angles"            : { "initial" : 65, "cost" : 10, "maximum" :84 }, 
+                "Breakaway"         : { "initial" : 65, "cost" : 4, "maximum" : 84 }, 
+                "Five Hole"         : { "initial" : 65, "cost" : 4, "maximum" : 82 }, 
+                "Glove High"        : { "initial" : 65, "cost" : 4, "maximum" : 86 }, 
+                "Glove Low"         : { "initial" : 65, "cost" : 3, "maximum" : 82 }, 
+                "Stick High"        : { "initial" : 65, "cost" : 4, "maximum" : 86 }, 
+                "Stick Low"         : { "initial" : 65, "cost" : 4, "maximum" : 82 },
+                "Passing"           : { "initial" : 65, "cost" : 4, "maximum" : 84}, 
+                "Poke Check"        : { "initial" : 65, "cost" : 4, "maximum" : 84}, 
+                "Rebound Control"   : { "initial" : 65, "cost" : 2, "maximum" : 82 }, 
+                "Shot Recovery"     : { "initial" : 65, "cost" : 3, "maximum" : 86 },
+                "Aggressiveness"    : { "initial" : 65, "cost" : 10, "maximum" :84 }, 
+                "Agility"           : { "initial" : 65, "cost" : 3, "maximum" : 84 }, 
+                "Durability"        : { "initial" : 65, "cost" : 10, "maximum" :84 }, 
+                "Endurance"         : { "initial" : 65, "cost" : 10, "maximum" :84 }, 
+                "Speed"             : { "initial" : 65, "cost" : 3, "maximum" : 84 }, 
+                "Vision"            : { "initial" : 65, "cost" : 6, "maximum" : 84 }
+            }, 
   
-    	    "Hybrid" : {
-    	        "Angles"            : { "initial" : 65, "cost" : 10, "maximum" :84 }, 
-    	        "Breakaway"         : { "initial" : 65, "cost" : 4, "maximum" : 84 }, 
-    	        "Five Hole"         : { "initial" : 65, "cost" : 4, "maximum" : 84 }, 
-    	        "Glove High"        : { "initial" : 65, "cost" : 4, "maximum" : 84 }, 
-    	        "Glove Low"         : { "initial" : 65, "cost" : 3, "maximum" : 84 }, 
-    	        "Stick High"        : { "initial" : 65, "cost" : 4, "maximum" : 84 }, 
-    	        "Stick Low"         : { "initial" : 65, "cost" : 4, "maximum" : 84 },
-    	        "Passing"           : { "initial" : 65, "cost" : 4, "maximum" : 84}, 
-    	        "Poke Check"        : { "initial" : 65, "cost" : 4, "maximum" : 84}, 
-    	        "Rebound Control"   : { "initial" : 65, "cost" : 2, "maximum" : 84 }, 
-    	        "Shot Recovery"     : { "initial" : 65, "cost" : 3, "maximum" : 84 },
-    	        "Aggressiveness"    : { "initial" : 65, "cost" : 10, "maximum" :84 }, 
-    	        "Agility"           : { "initial" : 65, "cost" : 3, "maximum" : 84 }, 
-    	        "Durability"        : { "initial" : 65, "cost" : 10, "maximum" :84 }, 
-    	        "Endurance"         : { "initial" : 65, "cost" : 10, "maximum" :84 }, 
-    	        "Speed"             : { "initial" : 65, "cost" : 5, "maximum" : 84 }, 
-    	        "Vision"            : { "initial" : 65, "cost" : 3, "maximum" : 84 } 
-    	    }, 
-    	    
-    	    "Butterfly" : {
-    	        "Angles"            : { "initial" : 65, "cost" : 10, "maximum" :84}, 
-    	        "Breakaway"         : { "initial" : 65, "cost" : 4, "maximum" : 84}, 
-    	        "Five Hole"         : { "initial" : 65, "cost" : 4, "maximum" : 86}, 
-    	        "Glove High"        : { "initial" : 65, "cost" : 4, "maximum" : 82}, 
-    	        "Glove Low"         : { "initial" : 65, "cost" : 4, "maximum" : 86}, 
-    	        "Stick High"        : { "initial" : 65, "cost" : 3, "maximum" : 82}, 
-    	        "Stick Low"         : { "initial" : 65, "cost" : 4, "maximum" : 86},
-    	        "Passing"           : { "initial" : 65, "cost" : 3, "maximum" : 84}, 
-    	        "Poke Check"        : { "initial" : 65, "cost" : 4, "maximum" : 84, 
-    	        "Rebound Control"   : { "initial" : 65, "cost" : 2, "maximum" : 84}, 
-    	        "Shot Recovery"     : { "initial" : 65, "cost" : 3, "maximum" : 82},
-    	        "Aggressiveness"    : { "initial" : 65, "cost" : 10, "maximum" :84}, 
-    	        "Agility"           : { "initial" : 65, "cost" : 3, "maximum" : 84}, 
-    	        "Durability"        : { "initial" : 65, "cost" : 10, "maximum" :84}, 
-    	        "Endurance"         : { "initial" : 65, "cost" : 10, "maximum" :84}, 
-    	        "Speed"             : { "initial" : 65, "cost" : 4, "maximum" : 84}, 
-    	        "Vision"            : { "initial" : 65, "cost" : 4, "maximum" : 84}
-    	    }
-    	},
-	
-    	"attribute_categories" : {
-    	    "Reflexes" : ["Angles", "Breakaway", "Five Hole", "Glove High", "Glove Low", "Stick High", "Stick Low"], 
+            "Hybrid" : {
+                "Angles"            : { "initial" : 65, "cost" : 10, "maximum" :84 }, 
+                "Breakaway"         : { "initial" : 65, "cost" : 4, "maximum" : 84 }, 
+                "Five Hole"         : { "initial" : 65, "cost" : 4, "maximum" : 84 }, 
+                "Glove High"        : { "initial" : 65, "cost" : 4, "maximum" : 84 }, 
+                "Glove Low"         : { "initial" : 65, "cost" : 3, "maximum" : 84 }, 
+                "Stick High"        : { "initial" : 65, "cost" : 4, "maximum" : 84 }, 
+                "Stick Low"         : { "initial" : 65, "cost" : 4, "maximum" : 84 },
+                "Passing"           : { "initial" : 65, "cost" : 4, "maximum" : 84}, 
+                "Poke Check"        : { "initial" : 65, "cost" : 4, "maximum" : 84}, 
+                "Rebound Control"   : { "initial" : 65, "cost" : 2, "maximum" : 84 }, 
+                "Shot Recovery"     : { "initial" : 65, "cost" : 3, "maximum" : 84 },
+                "Aggressiveness"    : { "initial" : 65, "cost" : 10, "maximum" :84 }, 
+                "Agility"           : { "initial" : 65, "cost" : 3, "maximum" : 84 }, 
+                "Durability"        : { "initial" : 65, "cost" : 10, "maximum" :84 }, 
+                "Endurance"         : { "initial" : 65, "cost" : 10, "maximum" :84 }, 
+                "Speed"             : { "initial" : 65, "cost" : 5, "maximum" : 84 }, 
+                "Vision"            : { "initial" : 65, "cost" : 3, "maximum" : 84 } 
+            }, 
+            
+            "Butterfly" : {
+                "Angles"            : { "initial" : 65, "cost" : 10, "maximum" :84}, 
+                "Breakaway"         : { "initial" : 65, "cost" : 4, "maximum" : 84}, 
+                "Five Hole"         : { "initial" : 65, "cost" : 4, "maximum" : 86}, 
+                "Glove High"        : { "initial" : 65, "cost" : 4, "maximum" : 82}, 
+                "Glove Low"         : { "initial" : 65, "cost" : 4, "maximum" : 86}, 
+                "Stick High"        : { "initial" : 65, "cost" : 3, "maximum" : 82}, 
+                "Stick Low"         : { "initial" : 65, "cost" : 4, "maximum" : 86},
+                "Passing"           : { "initial" : 65, "cost" : 3, "maximum" : 84}, 
+                "Poke Check"        : { "initial" : 65, "cost" : 4, "maximum" : 84}, 
+                "Rebound Control"   : { "initial" : 65, "cost" : 2, "maximum" : 84}, 
+                "Shot Recovery"     : { "initial" : 65, "cost" : 3, "maximum" : 82},
+                "Aggressiveness"    : { "initial" : 65, "cost" : 10, "maximum" :84}, 
+                "Agility"           : { "initial" : 65, "cost" : 3, "maximum" : 84}, 
+                "Durability"        : { "initial" : 65, "cost" : 10, "maximum" :84}, 
+                "Endurance"         : { "initial" : 65, "cost" : 10, "maximum" :84}, 
+                "Speed"             : { "initial" : 65, "cost" : 4, "maximum" : 84}, 
+                "Vision"            : { "initial" : 65, "cost" : 4, "maximum" : 84}
+            }
+        },
+    
+        "attribute_categories" : {
+            "Reflexes" : ["Angles", "Breakaway", "Five Hole", "Glove High", "Glove Low", "Stick High", "Stick Low"], 
             "Puck Control" : ["Passing", "Poke Check", "Rebound Control", "Shot Recovery"], 
             "Athleticism" : ["Aggressiveness", "Agility", "Durability", "Endurance", "Speed", "Vision"]
-    	},
-	
-    	"boosts" : {
-    	    "Stick" : ["Five Hole", "Rebound Control", "Passing", "Poke Check", "Breakaway", "Aggressiveness"],
-    	    "Mask" : ["Speed", "Agility", "Shot Recovery", "Glove High", "Glove Low", "Stick High", "Stick Low", "Five Hole", "Rebound Control", "Passing", "Poke Check", "Endurance", "Angles", "Breakaway", "Aggressiveness", "Durability", "Vision"],
-    	    "Trapper" : ["Glove High", "Glove Low"],
-    	    "Blocker" : ["Stick High", "Stick Low"], 
-    	    "Pads" : ["Speed", "Agility", "Shot Recovery", "Angles", "Durability"]
-    	}
+        },
+    
+        "boosts" : {
+            "Stick" : ["Five Hole", "Rebound Control", "Passing", "Poke Check", "Breakaway", "Aggressiveness"],
+            "Mask" : ["Speed", "Agility", "Shot Recovery", "Glove High", "Glove Low", "Stick High", "Stick Low", "Five Hole", "Rebound Control", "Passing", "Poke Check", "Endurance", "Angles", "Breakaway", "Aggressiveness", "Durability", "Vision"],
+            "Trapper" : ["Glove High", "Glove Low"],
+            "Blocker" : ["Stick High", "Stick Low"], 
+            "Pads" : ["Speed", "Agility", "Shot Recovery", "Angles", "Durability"]
+        }
     }
-	
+    
 }
