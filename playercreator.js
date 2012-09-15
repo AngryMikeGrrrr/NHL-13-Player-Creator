@@ -31,7 +31,7 @@ function PlayerCreator(options) {
 
     function init() {
         
-        $root.append("<h1>NHL 13 Player Creator</h1><p><label>Type:</label><select id=\"type\"><option value=\"player\">Player</option><option value=\"goalie\">Goalie</option></select><label>Build:</label><select id=\"builds\"></select><label>Card:</label><select id=\"cards\"></select><p id=\"share_build\"></p></p><h2>Overall: <span class=\"average\"></span></h3><hr><h3 class=\"section_title\"></h3><p class=\"header\">XP: <span id=\"offxp\" class=\"xp\"></span></p><table class=\"attribute\"></table><hr><h3 class=\"section_title\"></h3><p class=\"header\">XP: <span id=\"defxp\" class=\"xp\"></span></p><table class=\"attribute\"></table><hr><h3 class=\"section_title\"></h3><p class=\"header\">XP: <span id=\"athxp\" class=\"xp\"></span></p><table class=\"attribute\"></table><hr><h3>Boosts</h3><table class=\"boosts\"></table>");
+        $root.append("<h1>NHL 13 Player Creator</h1><p><label>Type:</label><select id=\"type\"><option value=\"player\">Player</option><option value=\"goalie\">Goalie</option></select><label>Build:</label><select id=\"builds\"></select><label>Card:</label><select id=\"cards\"></select><p id=\"share_build\"></p></p><h2>Average: <span class=\"average\"></span></h3><hr><h3 class=\"section_title\"></h3><p class=\"header\">XP: <span id=\"offxp\" class=\"xp\"></span></p><table class=\"attribute\"></table><hr><h3 class=\"section_title\"></h3><p class=\"header\">XP: <span id=\"defxp\" class=\"xp\"></span></p><table class=\"attribute\"></table><hr><h3 class=\"section_title\"></h3><p class=\"header\">XP: <span id=\"athxp\" class=\"xp\"></span></p><table class=\"attribute\"></table><hr><h3>Boosts</h3><table class=\"boosts\"></table>");
         
         if(options.credits !== false)
             $root.append("<p class=\"credits\">Created by <a href=\"http://live.xbox.com/en-US/member/AngryMikeGrrrr\">AngryMikeGrrrr</a> in 2011 with updates from <a href='http://live.xbox.com/en-US/Profile?GamerTag=Twisterman'>Mike Nicoll</a> in 2012</p>");
@@ -403,7 +403,7 @@ function PlayerCreator(options) {
     
     function output_as_plain() {
         str = "";
-        str += player.build + ", " + player.card + ", Overall: "+ calculate_average() + "\n\n";
+        str += player.build + ", " + player.card + ", Average: "+ calculate_average() + "\n\n";
          $.each(player.attrs, function(attr, value) {
              str += attr + ": "+ value;
              boost = player.boosts[attr] === undefined ? 0 : player.boosts[attr]; 
@@ -426,13 +426,13 @@ function PlayerCreator(options) {
                 str += "+"+boost;
              str += "| "+(value+boost)+"\n";
          });     
-        str += "[b]Overall[/b]|||"+ calculate_average() + "[/table]";
+        str += "[b]Average[/b]|||"+ calculate_average() + "[/table]";
         return str;
     }
     
     function output_as_reddit() {
         str = "";
-        str += player.build + ", " + player.card + ", Overall: "+ calculate_average() + "\n\n";
+        str += player.build + ", " + player.card + ", Average: "+ calculate_average() + "\n\n";
          $.each(player.attrs, function(attr, value) {
              str += attr + ": "+ value;
              boost = player.boosts[attr] === undefined ? 0 : player.boosts[attr]; 
