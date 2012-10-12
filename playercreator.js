@@ -135,7 +135,20 @@ function PlayerCreator(options) {
             $($root.find(".section_title")[i]).html(name); 
             $($root.find(".attribute")[i]).append("<tr><td></td><td class=\"header\">Value</td><td class=\"header\">Maximum</td><td class=\"header\">XP Cost</td><td class=\"header\">Boost</td><td class=\"header\">Total</td><td></td><td></td></tr>"); 
             $.each(attrs, function(index, attr) {
-                $($root.find(".attribute")[i]).append("<tr><td class=\"attr\">"+attr+"</td><td class=\"value\"></td><td class=\"maximum\"><td class=\"cost\"></td><td class=\"boost\"></td><td class=\"total\"></td><td><input class=\"minus\" type=\"button\" value=\"-\" /></td><td><input class=\"plus\" type=\"button\" value=\"+\" /></td></tr>");
+                $($root.find(".attribute")[i]).append("<tr><td class=\"attr\">"+attr+"</td><td class=\"value\"></td><td class=\"maximum\"><td class=\"cost\"></td><td class=\"boost\"></td><td class=\"total\"></td><td><input class=\"minus\" type=\"button\" value=\"-\" /></td><td><input class=\"plus\" type=\"button\" value=\"+\" /></td><td><input class=\"max\" type=\"button\" value=\"Max\" /></td><td><input class=\"min\" type=\"button\" value=\"Reset\" /></td></tr>");
+                $root.find(".plus:last").click(function() {
+                    update_attribute($(this).parent(), attr, 1);
+                });
+    			$root.find(".max:last").click(function() {
+                    for(var i = 0; i < 30; i++){
+						update_attribute($(this).parent(), attr, 1);
+					}
+                });
+				$root.find(".min:last").click(function() {
+                    for(var i = 0; i < 30; i++){
+						update_attribute($(this).parent(), attr, 0);
+					}
+                });
                 $root.find(".plus:last").click(function() {
                     update_attribute($(this).parent(), attr, 1);
                 });
